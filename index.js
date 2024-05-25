@@ -14,9 +14,7 @@ main().then(() => {
 }).catch(err => console.log(err));
 
 async function main() {
-  // await mongoose.connect('mongodb://localhost:27017/MyData');
-  // await mongoose.connect('mongodb+srv://jusairjsr123:N3UKERvb1e3wVljm@crud-mongodb.sv17vi1.mongodb.net/API?retryWrites=true&w=majority&appName=CRUD-MONGODB');
-
+  await mongoose.connect('mongodb://localhost:27017/MyData');
 }
 
 // View engine setup
