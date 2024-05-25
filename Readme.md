@@ -1,4 +1,4 @@
-# Node js
+# Project setup
 1. ``npm init -y``
 2. `` npm i express@4 ``
 3. ``npm i ejs``
