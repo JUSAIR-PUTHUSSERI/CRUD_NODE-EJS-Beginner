@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #0a0030;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.15rem;
+   
+}
+.chat{
+   display: grid;  
+   justify-content: space-evenly;
+   gap: 7px;
+   margin-bottom: 15px;
+   margin-top: 15px;
+}
+.new{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: right;
+}
+.new-chat{
+    background: white;
+    padding: 15px 30px;
+    border-radius: 25px 10px;
+    border: none;
+    outline: none;
+    color: blue;
+    box-shadow: 10px -1px  50px aqua;
+    margin-right: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+
+.table-detail{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.table-style{
+    
+    /* border: 2px solid yellow; */
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 5%;
+    
+    
+    
+}
+tr>th{
+    margin-bottom: 5px;
+    /* border: 1px solid red; */
+}
+
+tr>td{
+    border: 1px solid red;
+    padding: 15px;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+}
+.edit-btn{
+    background: #00FF40;
+    padding: 10px 25px;
+    border-radius: 10px 20px;
+    border: none;
+    color: green;
+    text-align: center;   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    
+}
+.edit-btn:hover{
+    box-shadow: 2px 2px 25px greenyellow;
+
+}
+.delete-btn:hover{
+    box-shadow: 2px 2px 25px red;
+
+}
+.delete-btn{
+    background: #FF004F;
+    padding: 10px 20px;
+    border-radius: 10px 20px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+

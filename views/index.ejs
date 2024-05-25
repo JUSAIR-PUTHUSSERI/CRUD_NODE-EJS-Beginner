@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create You </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>All chats</h1>
+
+    <form action="/new" method="get">
+      <div class="new">
+        <button class="new-chat">New chat</button>
+      </div>
+    </form>
+
+    <div class="table-detail">
+      <table class="table-style">
+        <tr>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+
+        <% chats.forEach((chat) => { %>
+        <tr>
+          <td><%= chat.name %></td>
+          <td><%= chat.password %></td>
+          <td><%= chat.address %></td>
+          <td class="btn">
+             <a href="/edit/ <%= chat._id  %> " ><button class="edit-btn">Edit</button></a>
+            <a href="/delete/<%= chat.id %>"><button  class="delete-btn" >Delete</button></a>
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+ 
+  </body>
+</html>
+
+
