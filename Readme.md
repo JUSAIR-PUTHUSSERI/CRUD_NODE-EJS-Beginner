@@ -1,4 +1,6 @@
 # Project setup
+
+Install this packages using your terminal
 1. ``npm init -y``
 2. `` npm i express@4 ``
 3. ``npm i ejs``
