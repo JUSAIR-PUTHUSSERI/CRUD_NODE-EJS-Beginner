@@ -11,3 +11,12 @@ Install this packages using your terminal
 
 - MongoDB Connection
 ````https://mongoosejs.com/docs/index.html````
+
+
+- For port visible in terminal
+  ` app.listen(port, () => {
+  console.log(`Sever started port number http://localhost:${port}`)
+})
+`
+- Without nodemon using you can auto restart ..
+  ` node --watch index.js `
