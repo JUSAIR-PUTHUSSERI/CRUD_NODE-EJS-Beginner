@@ -45,13 +45,15 @@
 </head>
 <body>
 <div class="container">
-    <form class="form" action="/new" method="post" style="display: grid; gap: 15px;">
-        <h1>write new chats</h1>
-        <input type="text" name="name" placeholder="Your name:">
-        <input type="text" name="password" placeholder="Your Password">
-        <input type="text" name="address" placeholder="Address of You">
-        <button type="submit">create</button>
+    <form class="form" action="/new" method="post" enctype="multipart/form-data" style="display: grid; gap: 15px;">
+        <h1>Write New Chats</h1>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="password" name="password" placeholder="Your Password" required>
+        <input type="text" name="address" placeholder="Address of You" required>
+        <input type="file" name="testImage" required>
+        <button type="submit">Create</button>
     </form>
+    
 </div>
 </body>
 </html>

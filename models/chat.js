@@ -14,6 +14,10 @@ const chatSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    images:{
+        data:Buffer,
+        ContentType:String
+    }
     
     
   });

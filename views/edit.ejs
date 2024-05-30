@@ -13,11 +13,15 @@
 
         }
         .container {
-            display: flex;
+            display: grid;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background: #000;
+        }
+        form{
+            display: grid;
+            gap: 15px;
         }
         input{
             width: 500px;
@@ -40,19 +44,45 @@
         }
         button:hover{
             background: greenyellow;
+            
+        }
+        button a:hover{
+            color: #000;
+        }
+        button a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+        .current-images{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .current-images img{
+            border: 2px dashed white;
+            border-radius: 15px;
+
         }
     </style>
 </head>
 <body>
     <div class="container">
-    <form class="form-edit" method="post" action="/edit/<%= upchat._id %>" style="display: grid; gap: 15px;">
         <h1>Edit Chat</h1>
-        
-        <input type="text" name="name" placeholder="Your name" value="<%= upchat.name %>" required>
-        <input type="text" name="password" placeholder="Your Password" value="<%= upchat.password %>" required>
-        <input type="text" name="address" placeholder="Address" value="<%= upchat.address %>" required>
-        <button type="submit">Update</button>
-    </form>
+
+        <form class="form-edit" method="post" action="/edit/<%= upchat._id %>" enctype="multipart/form-data">
+          <input type="text" name="name" placeholder="Your name" value="<%= upchat.name %>" required>
+          <input type="text" name="password" placeholder="Your Password" value="<%= upchat.password %>" required>
+          <input type="text" name="address" placeholder="Address" value="<%= upchat.address %>" required>
+          <input type="file" name="testImage"  accept="image/*">
+          <button type="submit">Update</button>
+        </form>
+      <div class="current-images">
+        <!-- Display the current image -->
+        <h2>Current Image:</h2>
+        <img src="/images/<%= upchat.images.data %>" alt="Current Image" style="max-width: 150px; height: auto;">
+    </div>
+        <button><a href="/">Back to Chats</a></button>
+
 </div>
 </body>
 </html>

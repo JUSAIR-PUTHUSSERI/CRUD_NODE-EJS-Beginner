@@ -21,6 +21,7 @@
           <th>Username</th>
           <th>Password</th>
           <th>Address</th>
+          <th>Image</th>
           <th>Action</th>
         </tr>
 
@@ -29,6 +30,9 @@
           <td><%= chat.name %></td>
           <td><%= chat.password %></td>
           <td><%= chat.address %></td>
+          <td>
+          <img src="/images/<%= chat.images.data %>" alt="Chat Image" style="max-width: 150px; height: 150px;">
+        </td>
           <td class="btn">
              <a href="/edit/ <%= chat._id  %> " ><button class="edit-btn">Edit</button></a>
             <a href="/delete/<%= chat.id %>"><button  class="delete-btn" >Delete</button></a>
