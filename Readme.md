@@ -13,3 +13,31 @@ Install this packages using your terminal
 
 - MongoDB Connection
 ````https://mongoosejs.com/docs/index.html````
+
+
+----------------------
+- "for the file upload
+ const multer = require('multer');
+
+
+    const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+    cb(null, 'public/images'); // Directory to save the uploaded files
+    },
+    filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+    }
+    });
+
+    const upload = multer({ storage: storage });
+
+    
+"
+------------
+- For port visible in terminal
+  ` app.listen(port, () => {
+  console.log(`Sever started port number http://localhost:${port}`)
+})
+`
+- Without nodemon using you can auto restart ..
+  ` node --watch index.js `
